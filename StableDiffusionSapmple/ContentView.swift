@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import StableDiffusion
 
 struct ContentView: View {
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
