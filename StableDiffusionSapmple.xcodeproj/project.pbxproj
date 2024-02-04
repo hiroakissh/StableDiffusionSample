@@ -16,6 +16,8 @@
 		5304AFAB2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFAA2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift */; };
 		5304AFB92B6F20690038B0A5 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 5304AFB82B6F20690038B0A5 /* StableDiffusion */; };
 		5304AFBB2B6F20690038B0A5 /* StableDiffusionSample in Frameworks */ = {isa = PBXBuildFile; productRef = 5304AFBA2B6F20690038B0A5 /* StableDiffusionSample */; };
+		5304AFBD2B6F23170038B0A5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFBC2B6F23170038B0A5 /* ViewModel.swift */; };
+		5304AFBF2B6F23DA0038B0A5 /* StableDiffusionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		5304AFA42B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StableDiffusionSapmpleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5304AFA82B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionSapmpleUITests.swift; sourceTree = "<group>"; };
 		5304AFAA2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionSapmpleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5304AFBC2B6F23170038B0A5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				5304AF8C2B6F1E3A0038B0A5 /* StableDiffusionSapmpleApp.swift */,
+				5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */,
+				5304AFBC2B6F23170038B0A5 /* ViewModel.swift */,
 				5304AF8E2B6F1E3A0038B0A5 /* ContentView.swift */,
 				5304AF902B6F1E3D0038B0A5 /* Assets.xcassets */,
 				5304AF922B6F1E3D0038B0A5 /* StableDiffusionSapmple.entitlements */,
@@ -270,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5304AFBF2B6F23DA0038B0A5 /* StableDiffusionStatus.swift in Sources */,
 				5304AF8F2B6F1E3A0038B0A5 /* ContentView.swift in Sources */,
+				5304AFBD2B6F23170038B0A5 /* ViewModel.swift in Sources */,
 				5304AF8D2B6F1E3A0038B0A5 /* StableDiffusionSapmpleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
