@@ -14,10 +14,10 @@
 		5304AF9F2B6F1E3D0038B0A5 /* StableDiffusionSapmpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AF9E2B6F1E3D0038B0A5 /* StableDiffusionSapmpleTests.swift */; };
 		5304AFA92B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFA82B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITests.swift */; };
 		5304AFAB2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFAA2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift */; };
-		5304AFB92B6F20690038B0A5 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 5304AFB82B6F20690038B0A5 /* StableDiffusion */; };
-		5304AFBB2B6F20690038B0A5 /* StableDiffusionSample in Frameworks */ = {isa = PBXBuildFile; productRef = 5304AFBA2B6F20690038B0A5 /* StableDiffusionSample */; };
 		5304AFBD2B6F23170038B0A5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFBC2B6F23170038B0A5 /* ViewModel.swift */; };
 		5304AFBF2B6F23DA0038B0A5 /* StableDiffusionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */; };
+		5304AFC22B71262F0038B0A5 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 5304AFC12B71262F0038B0A5 /* StableDiffusion */; };
+		5304AFC42B71262F0038B0A5 /* StableDiffusionSample in Frameworks */ = {isa = PBXBuildFile; productRef = 5304AFC32B71262F0038B0A5 /* StableDiffusionSample */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5304AFB92B6F20690038B0A5 /* StableDiffusion in Frameworks */,
-				5304AFBB2B6F20690038B0A5 /* StableDiffusionSample in Frameworks */,
+				5304AFC22B71262F0038B0A5 /* StableDiffusion in Frameworks */,
+				5304AFC42B71262F0038B0A5 /* StableDiffusionSample in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,8 +156,8 @@
 			);
 			name = StableDiffusionSapmple;
 			packageProductDependencies = (
-				5304AFB82B6F20690038B0A5 /* StableDiffusion */,
-				5304AFBA2B6F20690038B0A5 /* StableDiffusionSample */,
+				5304AFC12B71262F0038B0A5 /* StableDiffusion */,
+				5304AFC32B71262F0038B0A5 /* StableDiffusionSample */,
 			);
 			productName = StableDiffusionSapmple;
 			productReference = 5304AF892B6F1E3A0038B0A5 /* StableDiffusionSapmple.app */;
@@ -232,7 +232,7 @@
 			);
 			mainGroup = 5304AF802B6F1E3A0038B0A5;
 			packageReferences = (
-				5304AFB72B6F20690038B0A5 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+				5304AFC02B71262F0038B0A5 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
 			);
 			productRefGroup = 5304AF8A2B6F1E3A0038B0A5 /* Products */;
 			projectDirPath = "";
@@ -461,7 +461,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroakiapp.StableDiffusionSapmple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,7 +500,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroakiapp.StableDiffusionSapmple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -638,7 +640,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5304AFB72B6F20690038B0A5 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
+		5304AFC02B71262F0038B0A5 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/ml-stable-diffusion.git";
 			requirement = {
@@ -649,14 +651,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5304AFB82B6F20690038B0A5 /* StableDiffusion */ = {
+		5304AFC12B71262F0038B0A5 /* StableDiffusion */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5304AFB72B6F20690038B0A5 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			package = 5304AFC02B71262F0038B0A5 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
 			productName = StableDiffusion;
 		};
-		5304AFBA2B6F20690038B0A5 /* StableDiffusionSample */ = {
+		5304AFC32B71262F0038B0A5 /* StableDiffusionSample */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5304AFB72B6F20690038B0A5 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			package = 5304AFC02B71262F0038B0A5 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
 			productName = StableDiffusionSample;
 		};
 /* End XCSwiftPackageProductDependency section */
