@@ -18,6 +18,7 @@
 		5304AFBF2B6F23DA0038B0A5 /* StableDiffusionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */; };
 		531316562B712FEA0060B7C1 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 531316552B712FEA0060B7C1 /* StableDiffusion */; };
 		531316582B712FEA0060B7C1 /* StableDiffusionSample in Frameworks */ = {isa = PBXBuildFile; productRef = 531316572B712FEA0060B7C1 /* StableDiffusionSample */; };
+		5313165C2B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled in Resources */ = {isa = PBXBuildFile; fileRef = 531316592B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5304AFAA2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionSapmpleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5304AFBC2B6F23170038B0A5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionStatus.swift; sourceTree = "<group>"; };
+		531316592B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "coreml-stable-diffusion-v1-4_original_compiled"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				5304AFBC2B6F23170038B0A5 /* ViewModel.swift */,
 				5304AF8E2B6F1E3A0038B0A5 /* ContentView.swift */,
 				5304AF902B6F1E3D0038B0A5 /* Assets.xcassets */,
+				531316592B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled */,
 				5304AF922B6F1E3D0038B0A5 /* StableDiffusionSapmple.entitlements */,
 				5304AF932B6F1E3D0038B0A5 /* Preview Content */,
 			);
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5304AF952B6F1E3D0038B0A5 /* Preview Assets.xcassets in Resources */,
+				5313165C2B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled in Resources */,
 				5304AF912B6F1E3D0038B0A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

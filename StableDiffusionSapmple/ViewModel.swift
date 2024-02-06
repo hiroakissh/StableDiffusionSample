@@ -9,6 +9,7 @@ import Foundation
 import StableDiffusion
 import CoreGraphics
 
+@MainActor
 class ViewModel: ObservableObject {
     @Published var pipeline: StableDiffusionPipeline?
     @Published var image: [CGImage]?
@@ -23,17 +24,17 @@ class ViewModel: ObservableObject {
     func loadModels() async {
         guard let resourceURl = Bundle.main.resourceURL else { return }
         do {
-            Task.detached {
+            Task.detached { @MainActor in
                 self.status = .loadStart
             }
             // TODO: controlNetについて調べる
-            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceURl, controlNet: ["lllyasviel/sd-controlnet-canny"])
-            Task.detached {
+            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceURl, controlNet: ["LllyasvielControlV11F1ESd15Tile"])
+            Task.detached { @MainActor in
                 self.pipeline = pipeline
                 self.status = .loadFinish
             }
         } catch {
-            Task.detached {
+            Task.detached { @MainActor in
                 self.status = .error
             }
         }
@@ -41,14 +42,14 @@ class ViewModel: ObservableObject {
 
     func generateImage() async {
         do {
-            Task.detached {
+            Task.detached { @MainActor in
                 self.image = nil
                 self.status = .generateStart
             }
             let image = try self.pipeline?.generateImages(
                 configuration: .init(prompt: self.prompt)
             ) { progress in
-                Task.detached {
+                Task.detached { @MainActor in
                     self.image = progress.currentImages.map({ cgImage in
                         guard let cgImage else { fatalError() }
                         return cgImage
@@ -60,12 +61,12 @@ class ViewModel: ObservableObject {
                 guard let cgImage else { fatalError() }
                 return cgImage
             })
-            Task.detached {
+            Task.detached { @MainActor in
                 self.image = image
                 self.status = .generateFinish
             }
         } catch {
-            Task.detached {
+            Task.detached { @MainActor in
                 self.status = .error
             }
         }
