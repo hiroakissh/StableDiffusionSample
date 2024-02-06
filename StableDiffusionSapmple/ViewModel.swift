@@ -23,12 +23,13 @@ class ViewModel: ObservableObject {
 
     func loadModels() async {
         guard let resourceURl = Bundle.main.resourceURL else { return }
+        print(resourceURl)
         do {
             Task.detached { @MainActor in
                 self.status = .loadStart
             }
             // TODO: controlNetについて調べる
-            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceURl, controlNet: ["LllyasvielControlV11F1ESd15Tile"])
+            let pipeline = try StableDiffusionPipeline(resourcesAt: resourceURl, controlNet: ["coreml-stable-diffusion-v1-4_original_compiled"])
             Task.detached { @MainActor in
                 self.pipeline = pipeline
                 self.status = .loadFinish
