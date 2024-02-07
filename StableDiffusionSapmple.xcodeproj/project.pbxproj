@@ -14,6 +14,11 @@
 		5304AF9F2B6F1E3D0038B0A5 /* StableDiffusionSapmpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AF9E2B6F1E3D0038B0A5 /* StableDiffusionSapmpleTests.swift */; };
 		5304AFA92B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFA82B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITests.swift */; };
 		5304AFAB2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFAA2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift */; };
+		5304AFBD2B6F23170038B0A5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFBC2B6F23170038B0A5 /* ViewModel.swift */; };
+		5304AFBF2B6F23DA0038B0A5 /* StableDiffusionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */; };
+		531316562B712FEA0060B7C1 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 531316552B712FEA0060B7C1 /* StableDiffusion */; };
+		531316582B712FEA0060B7C1 /* StableDiffusionSample in Frameworks */ = {isa = PBXBuildFile; productRef = 531316572B712FEA0060B7C1 /* StableDiffusionSample */; };
+		5313165C2B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled in Resources */ = {isa = PBXBuildFile; fileRef = 531316592B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,9 @@
 		5304AFA42B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StableDiffusionSapmpleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5304AFA82B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionSapmpleUITests.swift; sourceTree = "<group>"; };
 		5304AFAA2B6F1E3D0038B0A5 /* StableDiffusionSapmpleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionSapmpleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5304AFBC2B6F23170038B0A5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableDiffusionStatus.swift; sourceTree = "<group>"; };
+		531316592B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "coreml-stable-diffusion-v1-4_original_compiled"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				531316562B712FEA0060B7C1 /* StableDiffusion in Frameworks */,
+				531316582B712FEA0060B7C1 /* StableDiffusionSample in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				5304AF8C2B6F1E3A0038B0A5 /* StableDiffusionSapmpleApp.swift */,
+				5304AFBE2B6F23DA0038B0A5 /* StableDiffusionStatus.swift */,
+				5304AFBC2B6F23170038B0A5 /* ViewModel.swift */,
 				5304AF8E2B6F1E3A0038B0A5 /* ContentView.swift */,
 				5304AF902B6F1E3D0038B0A5 /* Assets.xcassets */,
+				531316592B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled */,
 				5304AF922B6F1E3D0038B0A5 /* StableDiffusionSapmple.entitlements */,
 				5304AF932B6F1E3D0038B0A5 /* Preview Content */,
 			);
@@ -145,6 +158,10 @@
 			dependencies = (
 			);
 			name = StableDiffusionSapmple;
+			packageProductDependencies = (
+				531316552B712FEA0060B7C1 /* StableDiffusion */,
+				531316572B712FEA0060B7C1 /* StableDiffusionSample */,
+			);
 			productName = StableDiffusionSapmple;
 			productReference = 5304AF892B6F1E3A0038B0A5 /* StableDiffusionSapmple.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 5304AF802B6F1E3A0038B0A5;
+			packageReferences = (
+				531316542B712FEA0060B7C1 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+			);
 			productRefGroup = 5304AF8A2B6F1E3A0038B0A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5304AF952B6F1E3D0038B0A5 /* Preview Assets.xcassets in Resources */,
+				5313165C2B726F0F0060B7C1 /* coreml-stable-diffusion-v1-4_original_compiled in Resources */,
 				5304AF912B6F1E3D0038B0A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5304AFBF2B6F23DA0038B0A5 /* StableDiffusionStatus.swift in Sources */,
 				5304AF8F2B6F1E3A0038B0A5 /* ContentView.swift in Sources */,
+				5304AFBD2B6F23170038B0A5 /* ViewModel.swift in Sources */,
 				5304AF8D2B6F1E3A0038B0A5 /* StableDiffusionSapmpleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +376,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -407,6 +431,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -441,8 +466,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroakiapp.StableDiffusionSapmple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -479,8 +505,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroakiapp.StableDiffusionSapmple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,7 +529,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroakiapp.StableDiffusionSapmpleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,7 +552,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroakiapp.StableDiffusionSapmpleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,6 +644,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		531316542B712FEA0060B7C1 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hiroakissh/ml-stable-diffusion.git";
+			requirement = {
+				kind = revision;
+				revision = d3dd97a28b9becf8a4c6d35a1f1938ebbeb645e3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		531316552B712FEA0060B7C1 /* StableDiffusion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 531316542B712FEA0060B7C1 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			productName = StableDiffusion;
+		};
+		531316572B712FEA0060B7C1 /* StableDiffusionSample */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 531316542B712FEA0060B7C1 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			productName = StableDiffusionSample;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5304AF812B6F1E3A0038B0A5 /* Project object */;
 }
